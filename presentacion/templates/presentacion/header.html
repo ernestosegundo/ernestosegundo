@@ -1,0 +1,55 @@
+<header>
+    <div class="collapse bg-navbar" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">Acerca de</h4>
+                    <p class="text-white">
+                        Ernesto Segundo es un profesional en ingeniería de sistemas, con experiencia 
+                        en gestión de servicios de tecnologías de información, administración de servicios de 
+                        infraestructura de redes en entornos Windows y Linux, análisis y diseño de sistemas, 
+                        desarrollo de aplicaciones y asistencia y soporte técnico a usuarios de tecnologías de información. 
+                        Con conocimientos de sistemas informáticos gubernamentales y de gestión de procesos y 
+                        fundamentos de ITIL y COBIT.
+                    </p>
+                    <h6 class="text-white">
+                        <a href="#" class="text-white">Ver currículo</a>
+                    </h6>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contacto</h4>
+                    <ul class="list-unstyled">
+                        <li class="text-white">GitHub: @ErnestoSegundo</li>
+                        <li class="text-white">Twitter: @CapitanApiacho</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-success box-shadow">
+        <div class="container d-flex justify-content-between">
+            <div class="navbar-brand d-flex align-items-center">
+                <strong>{ Ernesto Segundo }</strong>
+            </div>
+            <a class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarHeader" aria-controls="navbarHeader"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-success bg-navbar">
+    <div class="container">
+        <div class="collapse navbar-collapse text-white" id="navbars">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'presentacion' %}">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'portafolio' %}">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'servicios' %}">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'blog' %}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
