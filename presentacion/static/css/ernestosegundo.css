@@ -50,3 +50,10 @@ footer p {
   margin: 10px 10px 20px 20px;
 }
 
+.summary-text{
+  background-color:blanchedalmond;
+  border-style: dotted;
+  border-color: red;
+  padding: 10px;
+}
+

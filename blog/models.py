@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from tinymce.models import HTMLField
+
 # Create your models here.
 class CategoriaPost(models.Model):
     nombre = models.CharField(max_length=50)
@@ -21,7 +23,7 @@ class Post(models.Model):
     imagen = models.ImageField(upload_to='blog', null=True, blank=True)
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     categorias = models.ManyToManyField(CategoriaPost)
-    contenido = models.TextField()
+    contenido = HTMLField()
     creado = models.DateTimeField(auto_now_add=True)
     modificado = models.DateTimeField(auto_now_add=True)
     
