@@ -11,9 +11,11 @@
 		<div class="container album py-0">
 			<div class="row">
 				<section class="content-page">
-                <h6>Blog</h6>
+                <h6>Entradas del Blog</h6>
 				{% for post in posts %}
 					{{post.titulo}}<br />
+					{{post.resumen}}<br />
+					{{post.contenido}}<br />
 					{{post.autor}}
 				{% endfor %}     
                 </section>
