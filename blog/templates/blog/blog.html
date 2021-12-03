@@ -11,13 +11,14 @@
 		<section class="container my-4">
            	{% for post in posts %}
 			<div class="d-inline">
-				<img class="w-50 h-50 align-top" src="{{post.imagen.url}}" alt="blog">
+				<img class="w-50 h-50 align-top" src="{{post.imagen.url}}" alt="blog">				
 			</div>
 			<div class="container d-inline pl-3">
 				<div class="d-inline-block">
 					<h5 class="text-success">{{post.titulo}}</h5>
 					<p class="text-right font-italic"><span class="font-weight-bold">Por:</span> <span class="text-muted">{{post.autor}}</span></p>
 					<p class="summary-text blockquote"><cite>{{post.resumen}}</cite></p>
+					<p class="font-italic"><span class="font-weight-bold">Creado el:</span> <span class="text-muted">{{post.creado}}</span></p>
 					<div class="text-right"><a href="" class="btn btn-success">Leer más</a></div>
 				</div>
 			</div>	
