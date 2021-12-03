@@ -8,23 +8,21 @@
 
 {% block content %}
     <main role="main">
-		<div class="container">
-			<div class="card-deck mb-3">
-				{% for post in posts %}
-				<div class="card mb-4 box-shadow">
-                	<div class="card-header">
-						<h5 class="my-0 font-weight-normal text-success">{{ post.titulo }}</h5>
-					</div>
-					<div class="card-body">
-						<p class="card-title pricing-card-title summary-text">{{ post.resumen }}</p>
-						<ul class="list-unstyled mt-3 mb-4">
-							<li><p class="text-right">Autor: <small class="text-muted">{{ post.autor }}</small></p></li>
-						</ul>
-						<a class="btn btn-lg btn-block btn-success" href="#">Leer entrada</a>
-					</div>  
-                </div>
-				{% endfor %}
-			</div>
-		</div>
+		{% for post in posts %}
+        	<section class="card-deck mb-3 text-center">
+            	<div class="container">
+                	<div class="card box-shadow">
+                    	<img class="img-fluid img-thumbnail" src="{{post.imagen.url}}" alt="" width="50%" height="50%">
+                    	<div class="float-right">
+                        	<div class="card-title">{{post.titulo}}</div>
+                            <div class="summary-text">{{post.resumen}}</div>
+                        	<div class="author-block">
+                            	<p>Autor: <span class="author-text">{{post.autor}}</span></p>
+                        	</div>
+                    	</div>
+                	</div>
+            	</div>
+        	</section>
+    	{% endfor %}
 	</main>
 {% endblock content %}
