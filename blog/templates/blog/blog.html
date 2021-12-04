@@ -18,7 +18,7 @@
 						<p class="text-right font-italic"><span class="font-weight-bold">Por:</span> <span class="text-muted">{{post.autor}}</span></p>
 						<p class="summary-text text-justify rounded"><cite>{{post.resumen}}</cite></p>
 						<p class="font-italic"><span class="font-weight-bold">Creado el:</span> <span class="text-muted text-lowercase">{{post.creado}}</span></p>
-						<div class="text-right"><a href="#" class="btn btn-success">Leer más</a></div>
+						<div class="text-right"><a href="{% url 'blogid' post.id %}" class="btn btn-success">Leer más</a></div>
 					</div>
 				</div>	
 			</li>

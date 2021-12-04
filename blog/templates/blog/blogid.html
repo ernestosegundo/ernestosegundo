@@ -1,0 +1,30 @@
+{% extends 'presentacion/masterpage.html' %}
+
+{% load static %}
+
+{% block title %}
+    Ernesto Segundo - Blog
+{% endblock title %}
+
+{% block content %}
+    <main role="main">
+		<section class="container my-4">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<div class="pl-3">
+						<div class="pb-3">
+							<div class="text-right"><a href="/blog/" class="btn btn-success">Ver todas las entradas del blog</a></div>
+							<h4 class="text-success">{{post.titulo}}</h4>
+							<p class="text-right font-italic"><span class="font-weight-bold">Por:</span> <span class="text-muted">{{post.autor}}</span></p>
+							<p class="summary-text text-justify rounded"><cite>{{post.resumen}}</cite></p>
+							<p class="rounded">{{post.contenido|safe}}</p>
+							<div class="text-center"><img class="w-50 h-50 mb-4" src="{{post.imagen.url}}" alt="{{post.post_id}}" /></div>
+							<p class="font-italic"><span class="font-weight-bold">Creado el:</span> <span class="text-muted text-lowercase">{{post.creado}}</span></p>
+							<div class="text-right"><a href="/blog/" class="btn btn-success">Ver todas las entradas del blog</a></div>
+						</div>
+					</div>	
+				</li>
+			</ul>
+        </section>
+	</main>
+{% endblock content %}

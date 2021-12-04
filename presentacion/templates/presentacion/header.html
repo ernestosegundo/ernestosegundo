@@ -47,7 +47,7 @@
                 <li class="nav-item"><a class="nav-link {% if request.path == '/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'presentacion' %}">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link {% if request.path == '/portafolio/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'portafolio' %}">Portafolio</a></li>
                 <li class="nav-item"><a class="nav-link {% if request.path == '/servicios/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'servicios' %}">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.path == '/blog/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'blog' %}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path|slice:':6' == '/blog/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'blog' %}">Blog</a></li>
                 <li class="nav-item"><a class="nav-link {% if request.path == '/contacto/' %} text-warning font-weight-bold {% else %} text-white {% endif %}" href="{% url 'contacto' %}">Contacto</a></li>
             </ul>
         </div>
