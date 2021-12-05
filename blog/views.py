@@ -8,15 +8,17 @@ def blog(request):
     return render(request, 'blog/blog.html', {'posts': posts})
 
 def blog_id(request, blog_id):
-    # El post
     post = Post.objects.get(id=blog_id)
 
-    # Las categorias del post
-    categorias_post = post.categorias.all()
-
-    posts = Post.objects.filter(categorias=categorias_post[0])
+    posts_relacionados = []
+    for categoria_post in post.categorias.all():
+        posts_relacionados += Post.objects.filter(categorias=categoria_post)
     
-    return render(request, "blog/blogid.html", {"post": post, "posts": posts})
+    for el_post in posts_relacionados:
+        if el_post.titulo == post.titulo:
+            posts_relacionados.remove(el_post)
+    
+    return render(request, "blog/blogid.html", {"post": post, "posts_relacionados": posts_relacionados})
 
 def categoria(request, categoria_id):
     categoria = CategoriaPost.objects.get(id=categoria_id)
