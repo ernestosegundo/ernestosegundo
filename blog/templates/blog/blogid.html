@@ -19,6 +19,10 @@
 							<p class="summary-text text-justify rounded"><cite>{{post.resumen}}</cite></p>
 							<p class="rounded">{{post.contenido|safe}}</p>
 							<div class="text-center"><img class="w-50 h-50 mb-4" src="{{post.imagen.url}}" alt="{{post.post_id}}" /></div>
+							<p class="font-italic d-inline"><span class="font-weight-bold">Categorias:</span></p>				
+							{% for categoria in post.categorias.all %}
+								<a class="text-lowercase bg-secondary rounded mx-1 px-2 text-white" href="">{{categoria.nombre}}</a>				
+							{% endfor %}
 							<p class="font-italic"><span class="font-weight-bold">Creado el:</span> <span class="text-muted text-lowercase">{{post.creado}}</span></p>
 							<div class="text-right"><a href="/blog/" class="btn btn-success">Ver todas las entradas del blog</a></div>
 						</div>
@@ -26,5 +30,13 @@
 				</li>
 			</ul>
         </section>
+		<section class="container my-4">
+			<h5>Entradas relacionadas:</h5>
+			<ul class="list-group">
+				{% for post in posts %}
+				<li class="list-group-item"><a href="{% url 'blogid' post.id %}" class="text-success">{{post.titulo}}</a></li>
+				{% endfor %}
+			</ul>	
+		</section>
 	</main>
 {% endblock content %}
