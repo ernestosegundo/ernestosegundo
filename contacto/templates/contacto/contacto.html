@@ -16,7 +16,7 @@
                 	{% endif %}
                 	<form action="/contacto/" method="POST">
                     	{% csrf_token %}
-                    	<table>
+                    	<table class="my-4">
                         	{{formulario_contacto.as_table}}
                     	</table>
                     	<div class="text-center"><input type="submit" value="Enviar" class="btn btn-success" /></div>
