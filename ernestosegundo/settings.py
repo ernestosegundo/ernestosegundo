@@ -142,4 +142,8 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "capitanapiacho@gmail.com"
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD = ""
+=======
+EMAIL_HOST_PASSWORD = ""
+>>>>>>> 93874a99f1b6c820830c62e97f1b96a3ec606ea0
