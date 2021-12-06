@@ -12,10 +12,10 @@
 			<div class="container-form">
 				<section class="content-page">
 					{% if "valido" in request.GET %}
-                    	<p class="font-weight-bold text-info">Información enviada correctamente. Gracias.</p>
+                    	<p class="font-weight-bold text-warning">Información enviada correctamente. Gracias.</p>
                 	{% endif %}
                 	<form action="/contacto/" method="POST">
-                    {% csrf_token %}
+                    	{% csrf_token %}
                     	<table>
                         	{{formulario_contacto.as_table}}
                     	</table>
