@@ -58,3 +58,12 @@ footer p {
   padding: 10px;
 }
 
+.container-form{
+  background-color:darkseagreen;
+  color: white;
+  width: 50%;
+  margin: 10px auto;
+  padding: 20px 15px;
+  border-radius: 5px;
+  text-align: left;
+}
