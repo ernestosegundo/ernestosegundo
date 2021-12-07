@@ -13,7 +13,7 @@
 				<section class="content-page">
 					{% if "valido" in request.GET %}
                     	<p class="font-weight-bold text-warning">Información enviada correctamente. Gracias.</p>
-                	{% endif %}
+					{% endif %}
 					<h4>Formulario de Contacto</h4>
                 	<form action="/contacto/" method="POST">
                     	{% csrf_token %}

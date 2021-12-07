@@ -8,12 +8,22 @@
 
 {% block content %}
     <main role="main">
-		<div class="container album py-0">
-			<div class="row">
-				<section class="content-page">
-                   <h6>Servicios</h6>     
-                </section>
-			</div>
-		</div>
+		<section class="container my-4">
+			<ul class="list-group">
+				{% for servicio in servicios %}
+				<li class="list-group-item">
+					<div class="pl-3">
+						<div class="pb-3">
+							<h5 class="text-success">{{servicio.nombre}}</h5>
+							<p class="text-justify rounded"><cite>{{servicio.descripcion}}</cite></p>
+							<p class="font-italic d-inline"><span class="font-weight-bold">Categoria:</span></p>				
+							<a class="text-lowercase bg-secondary rounded mx-1 px-2 text-white" href="">{{servicio.categoria.nombre}}</a>				
+							<div class="text-right"><a href="" class="btn btn-success">Ver más</a></div>
+						</div>
+					</div>	
+				</li>
+				{% endfor %}
+			</ul>
+        </section>
 	</main>
 {% endblock content %}
