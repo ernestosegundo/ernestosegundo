@@ -9,6 +9,7 @@
 {% block content %}
     <main role="main">
 		<section class="container my-4">
+			<div class="text-right mb-4"><a href="/servicios/" class="btn btn-success">Ver todos los servicios</a></div>
 			<ul class="list-group">
 				{% for servicio in servicios %}
 				<li class="list-group-item">
@@ -17,13 +18,14 @@
 							<h5 class="text-success">{{servicio.nombre}}</h5>
 							<p class="text-justify rounded"><cite>{{servicio.descripcion}}</cite></p>
 							<p class="font-italic d-inline"><span class="font-weight-bold">Categoria:</span></p>				
-							<a class="text-lowercase bg-secondary rounded mx-1 px-2 text-white" href="{% url 'categoria_servicio' servicio.categoria.id %}">{{servicio.categoria.nombre}}</a>				
+							<div class="text-lowercase bg-secondary rounded mx-1 px-2 text-white d-inline">{{categoria.nombre}}</div>				
 							<div class="text-right"><a href="{% url 'servicio' servicio.id %}" class="btn btn-success">Ver más</a></div>
 						</div>
 					</div>	
 				</li>
 				{% endfor %}
 			</ul>
+			<div class="text-right mt-4"><a href="/servicios/" class="btn btn-success">Ver todos los servicios</a></div>
         </section>
 	</main>
 {% endblock content %}
