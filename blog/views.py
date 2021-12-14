@@ -8,7 +8,9 @@ def blog(request):
 
     categorias = CategoriaPost.objects.all().order_by('nombre')
 
-    return render(request, 'blog/blog.html', {'posts': posts, 'categorias': categorias})
+    ultimo_post = Post.objects.latest('id')
+
+    return render(request, 'blog/blog.html', {'posts': posts, 'categorias': categorias, 'ultimo_post': ultimo_post})
 
 def blog_id(request, blog_id):
     post = Post.objects.get(id=blog_id)
