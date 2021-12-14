@@ -67,3 +67,7 @@ footer p {
   border-radius: 5px;
   text-align: left;
 }
+
+.bg-darkseagreen {
+  background-color: darkseagreen;
+}

@@ -4,8 +4,11 @@ from blog.models import Post, CategoriaPost
 
 # Create your views here.
 def blog(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/blog.html', {'posts': posts})
+    posts = Post.objects.all().order_by('-id')
+
+    categorias = CategoriaPost.objects.all().order_by('nombre')
+
+    return render(request, 'blog/blog.html', {'posts': posts, 'categorias': categorias})
 
 def blog_id(request, blog_id):
     post = Post.objects.get(id=blog_id)
